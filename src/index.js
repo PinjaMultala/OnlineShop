@@ -5,12 +5,13 @@ import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import {Context} from './Context';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import NavBar from './Components/NavBar'
-import ProductList from './Components/ProductList'
+import { Route, Switch} from 'react-router-dom';
+
 import Details from './Components/Details'
 import Cart from './Components/Cart'
 import Default from './Components/Default'
+import MakeupList from './Components/MakeupList';
+import MakeupPage from './Components/Pages/MakeupPage';
 
 ReactDOM.render(
     <Context>
@@ -20,6 +21,7 @@ ReactDOM.render(
               <Route exact path="/" component={App}/>
               <Route path="/details" component={Details}/>
               <Route path="/cart" component={Cart}/>
+              <Route path="/makeup" component={MakeupPage}/>
               <Route component={Default}/>
             </Switch>
         </Router>
